@@ -10,6 +10,7 @@
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
+		android:layout_margin="10dp"
 		android:minWidth="25px"
 		android:minHeight="25px"
 		android:id="@+id/phonewordText" />
@@ -17,14 +18,26 @@
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:hint="Enter Phoneword"
+		android:layout_margin="10dp"
 		android:layout_below="@id/phonewordText"
 		android:id="@+id/phonewordEditText" />
 	<Button
 		android:text="Translate"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
+		android:layout_margin="10dp"
 		android:textColor="@android:color/white"
 		android:background="@android:color/holo_blue_light"
 		android:id="@+id/translateButton"
 		android:layout_below="@id/phonewordEditText" />
+	<Button
+		android:text="@string/translationHistory"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="10dp"
+		android:textColor="@android:color/white"
+		android:background="@android:color/holo_blue_light"
+		android:layout_below="@id/translateButton"
+		android:id="@+id/historyButton"
+		android:enabled="false" />
 </RelativeLayout>
