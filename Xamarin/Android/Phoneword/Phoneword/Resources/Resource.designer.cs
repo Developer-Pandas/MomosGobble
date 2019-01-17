@@ -2636,11 +2636,11 @@ namespace Phoneword
 			// aapt resource value: 0x7f08000b
 			public const int parent_matrix = 2131230731;
 			
-			// aapt resource value: 0x7f08008c
-			public const int phonewordEditText = 2131230860;
-			
 			// aapt resource value: 0x7f08008b
-			public const int phonewordText = 2131230859;
+			public const int phonewordEditText = 2131230859;
+			
+			// aapt resource value: 0x7f08008c
+			public const int phonewordText = 2131230860;
 			
 			// aapt resource value: 0x7f08004d
 			public const int pin = 2131230797;

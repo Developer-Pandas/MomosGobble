@@ -23,8 +23,7 @@ namespace Core
                     var result = TranslateToNumber(c);
                     if (result != null)
                         newNumber.Append(result);
-                }
-                // otherwise we've skipped a non-numeric char
+                }                
             }
             return newNumber.ToString();
         }
