@@ -23,7 +23,9 @@ namespace Phoneword
             TextView tv = FindViewById<TextView>(Resource.Id.phonewordText);
             tv.LabelFor = Resource.Id.phonewordEditText;
             Button translationHistoryButton = FindViewById<Button>(Resource.Id.historyButton);
+            Button hello = FindViewById<Button>(Resource.Id.myButton);
             translationHistoryButton.Hint= Resources.GetText(Resource.String.translationHistory);
+            translatedPhoneWord.Text = "Changed the font";
             string translatedNumber = string.Empty;
             translateButton.Click += (sender, e) =>
             {                
