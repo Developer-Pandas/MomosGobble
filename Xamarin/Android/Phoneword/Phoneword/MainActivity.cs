@@ -20,8 +20,7 @@ namespace Phoneword
             TextView translatedPhoneWord = FindViewById<TextView>(Resource.Id.phonewordText);
             Button translateButton = FindViewById<Button>(Resource.Id.translateButton);
             translateButton.ContentDescription = "save data";
-            TextView tv = FindViewById<TextView>(Resource.Id.phonewordText);
-            tv.LabelFor = Resource.Id.phonewordEditText;
+            translatedPhoneWord.LabelFor = Resource.Id.phonewordEditText;
             Button translationHistoryButton = FindViewById<Button>(Resource.Id.historyButton);
             Button hello = FindViewById<Button>(Resource.Id.myButton);
             translationHistoryButton.Hint= Resources.GetText(Resource.String.translationHistory);
@@ -48,7 +47,7 @@ namespace Phoneword
                 StartActivity(intent);
             };
             var count = 0;
-            tv.Focusable = false;
+            translatedPhoneWord.Focusable = false;
             translationHistoryButton.Click += delegate {
                 translationHistoryButton.Text = string.Format("{0} clicks!", count++);
                 translationHistoryButton.AnnounceForAccessibility(translationHistoryButton.Text);
