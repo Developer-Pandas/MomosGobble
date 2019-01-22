@@ -10,8 +10,7 @@ namespace Phoneword
     {
         protected override void OnCreate(Bundle bundle)
         {
-            base.OnCreate(bundle);
-            // Create your application here
+            base.OnCreate(bundle);            
             var phoneNumbers = Intent.Extras.GetStringArrayList("phone_numbers") ?? new string[0];
             this.ListAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, phoneNumbers);
         }

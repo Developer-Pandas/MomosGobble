@@ -6,12 +6,25 @@ AssetManager, like this:
 
 public class ReadAsset : Activity
 {
-    protected override void OnCreate (Bundle bundle)
-    {
-        base.OnCreate (bundle);
+   protected override void OnCreate (Bundle bundle)
+{
+    base.OnCreate (bundle);
 
-        InputStream input = Assets.Open ("my_asset.txt");
+    // Create a new TextView and set it as our view
+    TextView tv = new TextView (this);
+    
+    // Read the contents of our asset
+    string content;
+    AssetManager assets = this.Assets;
+    using (StreamReader sr = new StreamReader (assets.Open ("read_asset.txt")))
+    {
+        content = sr.ReadToEnd ();
     }
+
+    // Set TextView.Text to our asset content
+    tv.Text = content;
+    SetContentView (tv);
+}
 }
 
 Additionally, some Android functions will automatically load asset files:
